@@ -9,7 +9,7 @@ Using Clippy and its friends in your React Application it has never been easier!
 ## Instalation
 
 ```
-yarn add @react95/clippy
+pnpm add @react95/clippy
 ```
 
 ## Usage

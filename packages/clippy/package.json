@@ -23,11 +23,11 @@
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "yarn build:cjs && yarn build:esm",
-    "build:esm": "cross-env NODE_ENV=esm yarn babel ./src --out-dir dist/esm --copy-files",
-    "build:cjs": "cross-env NODE_ENV=cjs yarn babel ./src --out-dir dist/cjs --copy-files",
+    "build": "pnpm build:cjs && pnpm build:esm",
+    "build:esm": "cross-env NODE_ENV=esm pnpm babel ./src --out-dir dist/esm --copy-files",
+    "build:cjs": "cross-env NODE_ENV=cjs pnpm babel ./src --out-dir dist/cjs --copy-files",
     "lint": "eslint --ext js,jsx --quiet src tests",
-    "prepublish": "yarn build",
+    "prepublish": "pnpm build",
     "prepublishOnly": "node ../../scripts/prepublish.js",
     "test": "jest --config=../../jest/config/clippy.js"
   },

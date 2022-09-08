@@ -14,13 +14,13 @@ We're really happy you want to contribute to the project! The following steps wi
 2. Install the required dependencies
 
    ```sh
-   $ yarn
+   $ pnpm
    ```
 
 3. Start up the dev server:
 
    ```sh
-   $ yarn dev
+   $ pnpm dev
    ```
 
 Access http://localhost:6006 to see the storybook running
@@ -41,7 +41,7 @@ You need to follow a simple structure pattern:
   The easiest way to do this is running
 
   ```sh
-  $ yarn commit
+  $ pnpm commit
   ```
 
   from within the root of this repository;

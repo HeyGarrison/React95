@@ -31,7 +31,7 @@ npm install @react95/core @react95/gatsby-theme styled-components
 
 # or
 
-yarn add @react95/core @react95/gatsby-theme styled-components
+pnpm add @react95/core @react95/gatsby-theme styled-components
 ```
 
 2. Add the configuration to your `gatsby-config.js` file

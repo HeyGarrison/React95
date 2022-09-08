@@ -9,7 +9,7 @@ npx create-react-app my-app --template @react95
 
 # or
 
-yarn create react-app my-app --template @react95
+pnpm create react-app my-app --template @react95
 ```
 
 For more information, please refer to:

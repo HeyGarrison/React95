@@ -9,7 +9,7 @@ npx create-react-app my-app --template @react95/typescript
 
 # or
 
-yarn create react-app my-app --template @react95/typescript
+pnpm create react-app my-app --template @react95/typescript
 ```
 
 For more information, please refer to:

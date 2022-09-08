@@ -6,12 +6,12 @@ React95 is a component library inspired on the **Windows 95** UI design.
 
 ## Installation
 
-React95 will be available via either npm and yarn.
+React95 will be available via either npm and pnpm.
 
 ```shell
 npm install @react95/core
 # or
-yarn add @react95/core
+pnpm add @react95/core
 ```
 
 You'll also need to add the [`@react95/icons/icons.css`](../icons) file
@@ -40,7 +40,7 @@ make sure to install the types properly for `styled-components` and `xstyled`
 ```shell
 npm install @types/styled-components @types/xstyled__styled-components
 # or
-yarn add @types/styled-components @types/xstyled__styled-components
+pnpm add @types/styled-components @types/xstyled__styled-components
 ```
 
 You can find a list of all available components at our [Storybook](https://react95.github.io/React95/)
@@ -55,7 +55,7 @@ steps:
 ```
   npm install --save-dev next-transpile-modules next-fonts
   // or
-  yarn add next-transpile-modules next-fonts
+  pnpm add next-transpile-modules next-fonts
 ```
 
 - Edit your `next.config.js` file to something like:

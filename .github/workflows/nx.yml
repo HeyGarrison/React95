@@ -20,7 +20,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm.lock') }}
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
@@ -31,12 +31,12 @@ jobs:
         with:
           node-version: 16
 
-      - run: yarn
-      - run: yarn nx-cloud start-ci-run
-      - run: yarn nx affected --target=build --parallel --max-parallel=3
-      - run: yarn nx affected --target=test --parallel --max-parallel=2
-      - run: yarn nx affected --target=lint --parallel --max-parallel=1
-      - run: yarn nx-cloud stop-all-agents
+      - run: pnpm
+      - run: pnpm nx-cloud start-ci-run
+      - run: pnpm nx affected --target=build --parallel --max-parallel=3
+      - run: pnpm nx affected --target=test --parallel --max-parallel=2
+      - run: pnpm nx affected --target=lint --parallel --max-parallel=1
+      - run: pnpm nx-cloud stop-all-agents
 
   agents:
     runs-on: ubuntu-latest
@@ -50,6 +50,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: yarn
+      - run: pnpm
       - name: Start Nx Agent ${{ matrix.agent }}
-        run: yarn nx-cloud start-agent
+        run: pnpm nx-cloud start-agent

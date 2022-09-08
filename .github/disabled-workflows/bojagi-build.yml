@@ -32,11 +32,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn --pure-lockfile --non-interactive
+        run: pnpm --pure-lockfile --non-interactive
 
       - name: Build
         run: |
-          yarn build:bojagi
+          pnpm build:bojagi
 
       - uses: actions/upload-artifact@v2
         with:

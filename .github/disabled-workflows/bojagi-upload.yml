@@ -28,7 +28,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn --pure-lockfile --non-interactive
+        run: pnpm --pure-lockfile --non-interactive
 
       - name: 'Download artifact'
         uses: actions/github-script@v3.1.1
@@ -61,6 +61,6 @@ jobs:
           unzip ./packages/core/.bojagi.zip -d ./packages/core/.bojagi/tmp
 
       - name: Upload
-        run: yarn upload:bojagi
+        run: pnpm upload:bojagi
         env:
           BOJAGI_SECRET: ${{ secrets.BOJAGI_SECRET }}

@@ -987,7 +987,7 @@ Some icons have additional sizes that can be seen [in Storybook](https://react95
 ```shell
 npm install @react95/icons
 # or
-yarn add @react95/icons
+pnpm add @react95/icons
 ```
 
 ## Usage

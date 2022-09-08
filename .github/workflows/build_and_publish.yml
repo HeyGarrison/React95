@@ -19,7 +19,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm.lock') }}
 
       - name: Configure CI Git User
         run: |
@@ -33,14 +33,14 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - name: Install dependencies
-        run: yarn --pure-lockfile --non-interactive
+        run: pnpm --pure-lockfile --non-interactive
       - name: Lint
-        run: yarn lint:all
+        run: pnpm lint:all
       - name: Test
-        run: yarn test
+        run: pnpm test
       - name: Build
         run: |
-          yarn build
+          pnpm build
       - name: Publish
         run: |
           GH_TOKEN=${GH_TOKEN}
